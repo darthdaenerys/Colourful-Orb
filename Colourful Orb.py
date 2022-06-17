@@ -72,6 +72,28 @@ cylinder(
     radius=outer_cylinder_radius
 )
 
+redlabel=label(
+    pos=vector(-4*base_length,-cylinderlength/2,0),
+    color=color.red,
+    text='Red\n'+str(int(red*255)),
+    font='serif',
+    border=10
+)
+greenlabel=label(
+    pos=vector(-3*base_length,-cylinderlength/2,0),
+    color=color.green,
+    text='Green\n'+str(int(green*255)),
+    font='serif',
+    border=10
+)
+bluelabel=label(
+    pos=vector(-2*base_length,-cylinderlength/2,0),
+    color=color.blue,
+    text='Blue\n'+str(int(blue*255)),
+    font='serif',
+    border=10
+)
+
 while True:
     rate(30)
 
@@ -94,24 +116,6 @@ while True:
     greencylinder.length=3*green
     bluecylinder.length=3*blue
 
-    label(
-        pos=vector(-4*base_length,-cylinderlength/2,0),
-        color=color.red,
-        text='Red\n'+str(int(red*255)),
-        font='serif',
-        border=10
-    )
-    label(
-        pos=vector(-3*base_length,-cylinderlength/2,0),
-        color=color.green,
-        text='Green\n'+str(int(green*255)),
-        font='serif',
-        border=10
-    )
-    label(
-        pos=vector(-2*base_length,-cylinderlength/2,0),
-        color=color.blue,
-        text='Blue\n'+str(int(blue*255)),
-        font='serif',
-        border=10
-    )
+    redlabel.text='Red\n'+str(int(red*255))
+    greenlabel.text='Green\n'+str(int(green*255))
+    bluelabel.text='Blue\n'+str(int(blue*255))
